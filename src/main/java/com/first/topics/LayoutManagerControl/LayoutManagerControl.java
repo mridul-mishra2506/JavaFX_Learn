@@ -21,15 +21,15 @@ There are 8 types of predefined layout manager in JavaFX.
  */
 public class LayoutManagerControl {
 
-    private static Button createButton(String name) {
-        Button button = new Button();
-        button.setText(name);
-        button.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        // button.setMinSize(100,100);
-        // BorderPane.setMargin(button, new Insets(10));
-        // BorderPane.setAlignment(button, Pos.CENTER);
-        return button;
-    }
+    // private static Button createButton(String name) {
+    //     Button button = new Button();
+    //     button.setText(name);
+    //     button.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+    //     // button.setMinSize(100,100);
+    //     // BorderPane.setMargin(button, new Insets(10));
+    //     // BorderPane.setAlignment(button, Pos.CENTER);
+    //     return button;
+    // }
 
     /*
      * public static BorderPane getControl(){
