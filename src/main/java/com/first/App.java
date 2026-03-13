@@ -1,8 +1,6 @@
 package com.first;
 
-// import com.first.topics.LabelControl.LabelControl;
-// import com.first.topics.ButtonControl.ButtonControl;
-import com.first.topics.LayoutManagerControl.LayoutManagerControl;
+import com.first.topics.PasswordFieldControl.PasswordFieldControl;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -199,7 +197,7 @@ public class App extends Application {
 
         // JavaFx Controles
 
-        Scene scene = new Scene(LayoutManagerControl.getControl(), 800, 700);
+        Scene scene = new Scene(PasswordFieldControl.getControl(), 800, 700);
         stage.setScene(scene);
         stage.show();
 
