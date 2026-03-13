@@ -1,9 +1,7 @@
 package com.first.topics.LayoutManagerControl;
 
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.Pane;
 
 /*
 Layout: The arrangement of the components inside a container is called Layout.
@@ -19,6 +17,7 @@ There are 8 types of predefined layout manager in JavaFX.
 6. TilePane
 7. HBox
 8. VBox
+9. Pane or Custom Layout
  */
 public class LayoutManagerControl {
 
@@ -193,23 +192,45 @@ public class LayoutManagerControl {
      * return anchorPane;
      * }
      * 
+     * 
+     * 
+     * public static StackPane getControl() {
+     * 
+     * Rectangle r1 = new Rectangle(100, 100, Color.RED);
+     * Rectangle r2 = new Rectangle(200, 200, Color.ORANGE);
+     * Rectangle r3 = new Rectangle(300, 300, Color.YELLOW);
+     * Rectangle r4 = new Rectangle(400, 400, Color.GREEN);
+     * 
+     * r1.setStroke(Color.BLACK);
+     * r2.setStroke(Color.BLACK);
+     * r3.setStroke(Color.BLACK);
+     * r4.setStroke(Color.BLACK);
+     * 
+     * StackPane stackPane = new StackPane();
+     * 
+     * stackPane.setAlignment(Pos.TOP_LEFT);
+     * stackPane.setAlignment(r2, Pos.BOTTOM_RIGHT);
+     * stackPane.setPadding(new Insets(10));
+     * stackPane.getChildren().addAll(r4, r3, r2, r1);
+     * 
+     * return stackPane;
+     * }
      */
 
-    public static StackPane getControl() {
+    public static Pane getControl() {
+        Button b1 = new Button("This is my big button");
+        Button b2 = new Button("small button");
+        Button b3 = new Button("I have my own positions");
+        b3.setLayoutX(50);
+        b3.setLayoutY(50);
 
-        Rectangle r1 = new Rectangle(100, 100, Color.RED);
-        Rectangle r2 = new Rectangle(200, 200, Color.ORANGE);
-        Rectangle r3 = new Rectangle(300, 300, Color.YELLOW);
-        Rectangle r4 = new Rectangle(400, 400, Color.GREEN);
+        Pane pane = new Pane();
 
-        r1.setStroke(Color.BLACK);
-        r2.setStroke(Color.BLACK);
-        r3.setStroke(Color.BLACK);
-        r4.setStroke(Color.BLACK);
+        pane.getChildren().addAll(b1, b2, b3);
 
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().addAll(r4, r3, r2, r1);
+        b1.relocate(100, 100);
 
-        return stackPane;
+        return pane;
     }
+
 }
